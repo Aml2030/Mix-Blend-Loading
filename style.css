@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Special Elite", cursive;
+  background-color: black;
+}
+div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+div span {
+  color: white;
+  font-weight: bold;
+  font-size: 35px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  line-height: 1;
+  mix-blend-mode: difference;
+}
+div::before {
+  content: "";
+  position: absolute;
+  left: -4px;
+  top: -4px;
+  width: 90px;
+  height: 35px;
+  background-color: white;
+  animation: move 4s linear infinite;
+  -webkit-animation: move 4s linear infinite;
+}
+@keyframes move {
+  0%,
+  100% {
+    left: -4px;
+  }
+  50% {
+    left: calc(100% - 90px);
+  }
+}
